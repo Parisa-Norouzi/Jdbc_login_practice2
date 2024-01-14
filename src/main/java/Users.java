@@ -16,6 +16,13 @@ public class Users {
         this.Password = password;
     }
 
+    public Users(String firstName, String lastName, String userName, String password) {
+        FirstName = firstName;
+        LastName = lastName;
+        UserName = userName;
+        Password = password;
+    }
+
     public int getId() {
         return Id;
     }
