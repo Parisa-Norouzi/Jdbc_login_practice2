@@ -1,9 +1,14 @@
+import java.sql.SQLException;
 import java.util.Scanner;
 
 public class Menu {
     private final Scanner scanner=new Scanner(System.in);
     private final UserService userService=new UserService();
-    public void  publicMenu(){
+
+    public Menu() throws SQLException {
+    }
+
+    public void  publicMenu() throws SQLException {
 
         System.out.println("*****welcome*******");
         System.out.println("1-sign up");
@@ -13,11 +18,16 @@ public class Menu {
         scanner.nextLine();
         switch (number){
             case 1 -> signUp();
-            case 2-> System.out.println("signUp");
+            case 2-> signIn();
             case 3 -> System.out.println("exist");
         }
     }
-    public void signUp(){
+
+    private void signIn() throws SQLException {
+        userService.singIn();
+    }
+
+    public void signUp() throws SQLException {
         userService.singUp();
     }
 }

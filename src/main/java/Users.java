@@ -4,6 +4,9 @@ public class Users {
     private String LastName;
     private String UserName ;
     private String Password ;
+   
+   
+
 
     public Users() {
     }
@@ -69,7 +72,7 @@ public class Users {
                 "Id=" + Id +
                 ", FirstName='" + FirstName + '\'' +
                 ", LastName='" + LastName + '\'' +
-                ", UserName='" + UserName + '\'' +
+              ", UserName='" + UserName + '\'' +
                 ", Password='" + Password + '\'' +
                 '}';
     }
